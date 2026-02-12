@@ -11,19 +11,20 @@ export default function Header() {
             alt="La Capilla del Café Logo"
           />
         </a>
-        <nav className="md:flex gap-5 items-center font-medium hidden">
-          <a href="/#nosotros">Nosotros</a>
-          <a href="/#especialidades">Especialidades</a>
-          <a href="/#sedes">Sedes</a>
-          <a href="/#experiencias">Experiencias</a>
+        <nav className="flex gap-3 lg:gap-4 items-center">
+          <a href="/#nosotros" className="max-md:hidden hover:underline underline-offset-4">Nosotros</a>
+          <a href="/#especialidades" className="max-md:hidden hover:underline underline-offset-4">Especialidades</a>
+          <a href="/#sedes" className="max-md:hidden hover:underline underline-offset-4">Sedes</a>
+          <a href="/#experiencias" className="max-md:hidden hover:underline underline-offset-4">Experiencias</a>
+          {/* <a href="/#delivery" className="max-md:hidden hover:underline underline-offset-4">Delivery</a> */}
           <a
             href="/carta"
-            className="bg-primary text-white rounded-xl px-4 py-1.5"
+            className="bg-primary text-white rounded-xl px-4 py-1.5 font-medium"
           >
             Carta
           </a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="1.5" className="size-7 md:hidden" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
         </nav>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="1.5" className="size-7 md:hidden" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
       </div>
     </section>
   );
