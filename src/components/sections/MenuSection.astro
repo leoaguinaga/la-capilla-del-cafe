@@ -3,7 +3,7 @@ import Badge from '../ui/Badge.astro';
 import { menuCategories } from '../../data/menu-categories.data';
 ---
 
-<section class="mx-auto max-w-6xl py-18" data-menu-content>
+<section class="mx-auto max-w-6xl py-18 px-4 md:px-0" data-menu-content>
   {menuCategories.map((category) => (
     <section
       id={category.id}
@@ -19,7 +19,7 @@ import { menuCategories } from '../../data/menu-categories.data';
       <div class="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {category.items.map((item) => (
           <article class="group flex items-start gap-4">
-            <div class="size-20 shrink-0 overflow-hidden rounded-lg shadow-sm">
+            <div class="size-25 md:size-22 shrink-0 overflow-hidden rounded-lg shadow-sm">
               <img src={item.image} alt={item.name} class="h-full w-full object-cover" loading="lazy" />
             </div>
 

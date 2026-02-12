@@ -7,16 +7,16 @@ import { instagramPosts } from "../../data/instagram.data";
 ---
 
 <section class="bg-coffee-cream/40 pt-12 pb-16 scroll-m-12" aria-labelledby="testimonials-title" id="experiencias">
-  <div class="mx-auto max-w-6xl">
+  <div class="mx-auto max-w-6xl px-4 md:px-0">
     <SectionHeading
       eyebrow="La Experiencia"
       title="Nuestros clientes dicen"
       align="center"
       titleTag="h2"
-      class="mb-6"
+      class="mb-4 md:mb-6"
     />
 
-    <div class="mb-10 text-center">
+    <div class="mb-7 md:mb-10 text-center">
       <div
         class="mb-2 flex items-center justify-center gap-1 text-primary"
         aria-label="Calificación de 5 estrellas"
@@ -297,7 +297,7 @@ import { instagramPosts } from "../../data/instagram.data";
     </div>
 
     <div class="space-y-8">
-      <div class="flex items-center justify-between gap-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <h3 class="font-display text-2xl text-secondary">
           Síguenos <span class="font-bold">@lacapilladelcafe</span>
         </h3>
@@ -308,7 +308,7 @@ import { instagramPosts } from "../../data/instagram.data";
           Ver Instagram
         </a>
       </div>
-      <div class="grid grid-cols-3 gap-2 md:grid-cols-5">
+      <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5">
         {
           instagramPosts.map((post) => (
             <a
