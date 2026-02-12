@@ -1,0 +1,136 @@
+---
+import Button from "../ui/Button.astro";
+import SectionHeading from "../ui/SectionHeading.astro";
+import { specialties } from "../../data/specialties.data";
+---
+
+<section
+  id="especialidades"
+  class="bg-background-light py-12 scroll-m-12"
+  aria-labelledby="specialties-title"
+>
+  <div class="mx-auto max-w-6xl">
+    <div
+      class="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+    >
+      <SectionHeading
+        eyebrow="Menú de Especialidad"
+        title="El trabajo de expertos"
+        titleTag="h2"
+        class="max-w-xl"
+      />
+      <a href="carta" class="flex flex-col gap-1 w-fit font-semibold">
+        <p class="px-3">Ver menú completo</p>
+        <div class="h-0.5 bg-primary"></div>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-4 grid-rows-2 gap-4 min-h-160">
+      <div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBesY0O7YT2zcT5YZHbMgl0h8jpmqySF5tciZTW1aXEwaWHsDje4oCrMkzEBm4aot5p5-PcW6DrRgszIZf-ojIgdrm31whcwho8CEqZsSLIWaOyeQwbI2cP8upF6SJoQVub11SThr8SgJxZl8f0VgQ70gtC0CisrJ0NL06G1YTmOZGiY5XGYVuoEHdQYHJ3Rj41ropZ22250OLMiky8TsN3go6VAwvV2-7mL7utNGTVgvf2Wgo1oV3GU0Rnw1CeJURw0tx-xAHHlw"
+          alt=""
+          class="absolute object-cover h-full w-full brightness-75"
+        />
+        <div
+          class="absolute z-2 bottom-3 left-3 p-4 flex flex-col gap-3 text-white"
+        >
+          <h3 class="text-3xl font-display font-semibold">Café filtrado</h3>
+          <p class="max-w-sm text-white">
+            Resaltamos las notas frutales y florales con métodos V60, Chemex y
+            Aeropress.
+          </p>
+          <h4 class="text-sm font-bold uppercase tracking-widest text-primary">
+            Explorar métodos
+          </h4>
+        </div>
+      </div>
+      <div class="col-start-3 relative rounded-2xl overflow-hidden">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiFpEP7s8kV_vf5OpXmJtaYTfs6GVJhnzQHmET63BqZfaupWUwHgwfrscUsH_LNFffW12QRga2M3A0enWWjCq56GqCw_WJE-LX89_NPutz67iMthGIQWRbrwVQYncbq52x6FwKOeq_d9Q8aZJ2sqJoTgMQGjDcm-TpDfOOG_-o1kYW6_SuoyKXAenDkxmTjGZpvh2lFwfviz48CYJ8aVm13njnXjwxnTp4FQDDdHmlK9nBHGrJNr0s9THZCjqfANeDX4lPTKwnWQ"
+          alt=""
+          class="absolute object-cover h-full w-full brightness-75"
+        />
+        <div
+          class="absolute z-2 top-3 left-3 p-4 flex flex-col gap-1 text-white"
+        >
+          <h3 class="text-xl font-display font-semibold">Espresso</h3>
+          <h4 class="text-sm font-bold uppercase tracking-widest text-primary">
+            Intensidad pura
+          </h4>
+        </div>
+      </div>
+      <div class="col-start-4 relative rounded-2xl overflow-hidden">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcXCyWu5y3NO_IewU_7IEwjJKtiGIDO0eCVXoWquiTDGqOoDUII-FCinKgSIVUqT08EcKY914ofHTp8NQfU7_zwYK7dIsgZsUoSjGEvKJQEHnSU2yjKYkHGmMTl34S-sXCCRwtwL_EHC_MoBuhg5iWJnZovp38v8cSppEWII1_3DWf1nA23DYgPx70cxSVQwF8ffkBD4Fc6GBtKe_zHxTYgjF4zTXclSPlTGOskf0lEpJ8OkvFDV6rJCgGaKGlppdJ4VbSt50vww"
+          alt=""
+          class="absolute object-cover h-full w-full brightness-75"
+        />
+        <div
+          class="absolute z-2 bottom-3 left-3 p-4 flex flex-col gap-1 text-white"
+        >
+          <h3 class="text-xl font-display font-semibold">Arte Latte</h3>
+          <h4 class="text-sm font-bold uppercase tracking-widest text-primary">
+            Cremas sedosas
+          </h4>
+        </div>
+      </div>
+      <div
+        class="col-span-2 col-start-3 row-start-2 rounded-2xl overflow-hidden relative"
+      >
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUsmnYzphH6sCquATXTJ2OPT9nwmi5rGRAm_dicw5EMrX1xuRGBxzps86lTKJBuZ4vWvrFQOUlZ0sW5QdpS51WHh-I_xLZcTGBiPVelOk5CGwpzNMsGk_4Zrgub4mRXeyO5T96q8FEp2KhNVWTF4KuMRHshtn0JK_2ExGZ1fxdMeXxjO5V7NaPBlfXEnrlW1aScI0sWoUjHOuDgloGXlnRQFZ9VNrI-AbTKQlWp4jfEQvDapWedB2IL7oroDcjlX4zHXOvnDgzWA"
+          alt=""
+          class="absolute object-cover h-full w-full brightness-75"
+        />
+        <div
+          class="absolute z-2 top-3 left-3 p-4 flex flex-col gap-3 text-white"
+        >
+          <h3 class="text-3xl font-display font-semibold">Pastelería Artesanal</h3>
+          <p class="max-w-sm text-white">
+            Horneados diariamente con mantequilla real y procesos lentos de fermentación.
+          </p>
+          <h4 class="text-sm font-bold uppercase tracking-widest text-primary">
+            Ver repostería
+          </h4>
+        </div>
+      </div>
+
+      <!-- {
+        specialties.map((item) => (
+          <article
+            class={`group relative overflow-hidden rounded-2xl ${
+              item.layout === "tall"
+                ? "aspect-[1/1.2] md:col-span-2 md:row-span-2"
+                : item.layout === "wide"
+                  ? "aspect-2/1 md:col-span-2 h-full"
+                  : "aspect-square h-full"
+            }`}
+          >
+            <img
+              src={item.image}
+              alt={item.alt}
+              class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-coffee-dark/90 via-coffee-dark/20 to-transparent p-6 md:p-8">
+              <h3
+                class={`${item.layout === "square" ? "text-xl" : "text-3xl"} font-display text-white`}
+              >
+                {item.title}
+              </h3>
+              {item.description && (
+                <p class="mb-3 mt-2 max-w-md text-white/80 transition-opacity duration-300">
+                  {item.description}
+                </p>
+              )}
+              <p class="mt-2 text-xs font-bold uppercase tracking-widest text-primary">
+                {item.subtitle}
+              </p>
+            </div>
+          </article>
+        ))
+      } -->
+    </div>
+  </div>
+</section>

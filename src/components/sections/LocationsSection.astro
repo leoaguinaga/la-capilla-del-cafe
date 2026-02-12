@@ -1,0 +1,82 @@
+---
+import Card from "../ui/Card.astro";
+import Badge from "../ui/Badge.astro";
+import SectionHeading from "../ui/SectionHeading.astro";
+import LocationIcon from "../../assets/icons/location.svg";
+import { locations } from "../../data/locations.data";
+---
+
+<section id="sedes" class="bg-white py-12 scroll-m-12" aria-labelledby="locations-title">
+  <div class="mx-auto max-w-6xl">
+    <div class="w-full flex items-center">
+      <SectionHeading
+        eyebrow="Nuestras Sedes"
+        title="Encuéntranos en Chiclayo"
+        align="center"
+        titleTag="h2"
+        class="mb-8 place-self-center"
+      />
+      <div class="flex gap-2 items-center justify-self-start">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-10 p-2 bg-primary/10 rounded-full text-primary"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-10 p-2 bg-primary/10 rounded-full text-primary"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_WlXlAFp5WyVJq-bwnC46ZdqUB_jSR0XaTmgN-N-4BxSrjdbPYenB-sVuWto9l3Dd4oy1x7InL2A0gB3ZA0MXKJoHkmERwgwbf6q4ayJHdxJY2qrz9uEqwF9rcBNyAKnTE3Nqvz1a9MiyK9GEFgSzC7_RHxCnqoEmiBGCDQ3idSajj7DCEYogXVz-RTV9KT7_upP160ad9h-pxWzrHeXVSjO-9doigzBqv5creieZ5nKpVjlFXRgXahyBVKUrTRKDbJBvFWVnyg" alt=""> -->
+
+    <div class="grid gap-6 md:grid-cols-3">
+      {
+        locations.map((location) => (
+          <Card class="group hover:border-primary/30 hover:shadow-xl h-rounded-xl overflow-hidden">
+            {/* {location.badge && <Badge>{location.badge}</Badge>} */}
+
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_WlXlAFp5WyVJq-bwnC46ZdqUB_jSR0XaTmgN-N-4BxSrjdbPYenB-sVuWto9l3Dd4oy1x7InL2A0gB3ZA0MXKJoHkmERwgwbf6q4ayJHdxJY2qrz9uEqwF9rcBNyAKnTE3Nqvz1a9MiyK9GEFgSzC7_RHxCnqoEmiBGCDQ3idSajj7DCEYogXVz-RTV9KT7_upP160ad9h-pxWzrHeXVSjO-9doigzBqv5creieZ5nKpVjlFXRgXahyBVKUrTRKDbJBvFWVnyg"
+              alt=""
+              class="object-cover max-h-120 w-full"
+            />
+            <div class="flex flex-col gap-2 p-4">
+              <h3 class="font-display text-2xl text-secondary">
+                {location.name}
+              </h3>
+              <p class="leading-relaxed text-secondary/65">
+                {location.address}
+              </p>
+              <a
+                href={location.mapUrl}
+                class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary transition-all hover:gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              >
+                Abrir en Google Maps
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </Card>
+        ))
+      }
+    </div>
+  </div>
+</section>

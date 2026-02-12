@@ -1,0 +1,24 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import MenuHeaderSection from '../components/sections/MenuHeaderSection.astro';
+import MenuSection from '../components/sections/MenuSection.astro';
+
+const navItems = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Carta', href: '/carta.html' },
+  { label: 'Sedes', href: '/#sedes' },
+  { label: 'Contacto', href: '/#contacto' }
+] as const;
+---
+
+<MainLayout
+  title="Menú Digital | La Capilla del Café"
+  description="Carta digital con cafés clásicos y métodos especiales de La Capilla del Café."
+  navItems={navItems}
+  ctaLabel="Volver al inicio"
+  ctaHref="/"
+  showFooter={true}
+>
+  <MenuHeaderSection />
+  <MenuSection />
+</MainLayout>

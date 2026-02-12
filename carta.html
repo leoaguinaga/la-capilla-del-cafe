@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menú Digital | La Capilla del Café</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "cream": "#F9F7F2",
+                        "coffee": "#3D2B1F",
+                        "primary": "#d47311",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+        body {
+            background-color: #F9F7F2;
+        }
+    </style>
+</head>
+<body class="font-display text-background-dark/90 min-h-screen">
+<header class="bg-cream pt-8 pb-4">
+<div class="max-w-md mx-auto px-4 text-center">
+<h1 class="font-serif text-2xl font-bold tracking-tight text-background-dark">
+            La Capilla <span class="text-primary italic font-normal">del</span> Café
+        </h1>
+<p class="text-[9px] tracking-[0.2em] uppercase text-background-dark/40 font-bold mt-1">Specialty Coffee Roasters</p>
+</div>
+</header>
+<nav class="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm py-4 border-b border-coffee/5">
+<div class="max-w-md mx-auto px-4">
+<div class="flex items-center gap-3 overflow-x-auto hide-scrollbar pb-1">
+<button class="px-5 py-2.5 rounded-full bg-coffee text-white text-xs font-bold whitespace-nowrap shadow-sm">Café Clásico</button>
+<button class="px-5 py-2.5 rounded-full bg-white text-coffee/60 border border-coffee/10 text-xs font-bold whitespace-nowrap">Métodos</button>
+<button class="px-5 py-2.5 rounded-full bg-white text-coffee/60 border border-coffee/10 text-xs font-bold whitespace-nowrap">Fríos</button>
+<button class="px-5 py-2.5 rounded-full bg-white text-coffee/60 border border-coffee/10 text-xs font-bold whitespace-nowrap">Pastelería</button>
+</div>
+</div>
+</nav>
+<main class="max-w-md mx-auto px-4 py-12">
+<section class="mb-20">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-serif text-2xl text-coffee">Café Clásico</h2>
+<div class="h-px flex-1 bg-coffee/10 ml-4"></div>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4 items-start group">
+<div class="w-20 h-20 flex-shrink-0 relative">
+<img alt="Cappuccino" class="w-full h-full object-cover rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQws6nq0MvC27-xmhgBZR68KhPpMIECs18fb1cHpxzeC3ut-hPMsShXUHy1OPdVODd0_rFcTqybAV4Nc_PE2s-oL99E3O9ZMFbG8Jb-v_wMIL_IJ0irUXwQRoYg5GWrs_En1o6H8zAu2YxJ9QLrpFAHPehYzkUx6c0BrUoRT3p-c0dpE5yd3TxkELz8LE6_kqBOw35Bm7T8qeKGRaz6iOldNPYEqiLmfLp1eZhMxR5-iqHsKy_hfcOwa8f4izVHdwwxddJevfktw"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-serif text-lg text-coffee leading-tight">Cappuccino Tradicional</h3>
+<span class="font-bold text-coffee ml-2">$4.50</span>
+</div>
+<p class="text-coffee/60 text-xs mt-1 line-clamp-2 font-light">Equilibrio perfecto entre espresso intenso y leche vaporizada con espuma aterciopelada.</p>
+<span class="inline-block mt-2 text-[9px] font-bold text-primary uppercase tracking-tighter border border-primary/20 px-2 py-0.5 rounded">Especialidad</span>
+</div>
+</div>
+<div class="flex gap-4 items-start group">
+<div class="w-20 h-20 flex-shrink-0">
+<img alt="Flat White" class="w-full h-full object-cover rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACyAPoPrNS73iY7gTTlMZtYnAywmNL0tOiKeTN855aGeet9qV-neZCg-53qMSfxR_TokuvMc4vIrY1moC2Y87C87S2D2YTE3zFQ_BfE5LZM8Co6XT6gp_x5WvrmAKuK3lkErrqRR2Nkjr6qgTvK44gE1cmh6coerXwFTsdjfTRyw6wIGhVEi2cdivzJ4RfmvD4Rmn93xa5B4Y_YwMMFoIFgSA9XTw-YsRhKPY7oahrh_XLtTO5oa-cIBSYfHLvIlvXhe9x_eLp8g"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-serif text-lg text-coffee leading-tight">Flat White</h3>
+<span class="font-bold text-coffee ml-2">$4.75</span>
+</div>
+<p class="text-coffee/60 text-xs mt-1 line-clamp-2 font-light">Doble shot de ristretto con una fina capa de leche micro-espumada y textura sedosa.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start group">
+<div class="w-20 h-20 flex-shrink-0">
+<img alt="Americano" class="w-full h-full object-cover rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0MnNqTnOx5TbnbxN2twpVuriCKi5tXjyQCu-zf6dQOk_dXfzowC1NuN8KKxe1oZq2ri3FIcH0yno6EA1lmvKaDgmsBUxDAEUluaBJUrIjB_iP-C3cW9P5ojkxE4DiuNOQxyt-Co6OUKV9vHemkY9kPZKG_vkznk1vSfLfjQRGjxhSVU1_Kt1vMZh5jFHzd_C-KFaFDTYcLuI8qqGhxvN3cX9KbxnhUHLvcNcGwN9x8m0rcmLxDctvu6WEXEZPH6MZLMQmD0zcRw"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-serif text-lg text-coffee leading-tight">Americano de Origen</h3>
+<span class="font-bold text-coffee ml-2">$3.90</span>
+</div>
+<p class="text-coffee/60 text-xs mt-1 line-clamp-2 font-light">Espresso diluido en agua caliente, resaltando la pureza de nuestros granos de altura.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start group">
+<div class="w-20 h-20 flex-shrink-0 relative">
+<img alt="Cortado" class="w-full h-full object-cover rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQzY_uKUflpyXxvY2u1dLS7ypGUITNw7Un7JeaOaUNWL4ycRXLgymJdlzxtmCi8U2QU6ZDKjbc8C1jqZaX3Iq10IbUoMrrhxhbrwUMbpdQ5O4IL0cGoiowOgvTTsYz7OhPCDnZN8kSGhwqAyUTeW1jbzt7DTQmhkShK0yPO91zykntk9b5bGCyvVknC2RHfKhUR7IcUn9oldEqG9lEroKUETHMxYnhjEFjR7WIZ5HXyTfOpwKjTvsos-lbwHf50ShnkIfBSixiCg"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-serif text-lg text-coffee leading-tight">Cortado Intenso</h3>
+<span class="font-bold text-coffee ml-2">$4.10</span>
+</div>
+<p class="text-coffee/60 text-xs mt-1 line-clamp-2 font-light">Proporción equilibrada de espresso y leche vaporizada. Fuerza y dulzor.</p>
+<span class="inline-block mt-2 text-[9px] font-bold text-primary uppercase tracking-tighter border border-primary/20 px-2 py-0.5 rounded">Especialidad</span>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-20">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-serif text-2xl text-coffee">Métodos Especiales</h2>
+<div class="h-px flex-1 bg-coffee/10 ml-4"></div>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4 items-start group">
+<div class="w-20 h-20 flex-shrink-0 relative">
+<img alt="V60" class="w-full h-full object-cover rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7l9OcbbZvNUiwHCUP0XYrfZ48jnrIQ9-VRCC9JCxV89GMD322DMxtZaDqhIX1hIx7lG1SYJQCsQZRVugyPXqleyj7XfYMzcb4HiRUoh9lsj4OEbG9VZ1J1AUcNXWnkaaCOSJd7lOYm0fCeV1zUMQuy0RJcmKNFl6CrY7emvBIfploD4iP-Tq9KHCFXOUY08VjnLavLYrP3DdqUkEB03sr63L3AvJ-r0F8zuCc8BHRnDS8AgeC8pf37MYdYlHdoz7nEGPz6Qbzwg"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-serif text-lg text-coffee leading-tight">Método V60</h3>
+<span class="font-bold text-coffee ml-2">$6.50</span>
+</div>
+<p class="text-coffee/60 text-xs mt-1 line-clamp-2 font-light">Filtrado manual que resalta la acidez cítrica y la claridad de sabores naturales.</p>
+<span class="inline-block mt-2 text-[9px] font-bold text-primary/70 uppercase tracking-tighter border border-primary/10 px-2 py-0.5 rounded">Recomendado</span>
+</div>
+</div>
+<div class="flex gap-4 items-start group">
+<div class="w-20 h-20 flex-shrink-0">
+<img alt="Chemex" class="w-full h-full object-cover rounded-lg shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj6KGwYCJQlemzy7FKqXoXf61EmqWVjfM_Y-wIlykXb_HsHffJR1381McL5PskvmKJEM99XZflDuTjXcXd0jnG-3WB57EgI0vDQArR96rlZGdV_shPx72JlrEGpC_yU4jQELqa_a79WgwYUMb_mDYF2JbciuW4d-Df7wP-M2YQyDtr59dVUiwkOL-N1JiNMnBJvWF6jg45gvZL7NFgnmQ0Ml99K9EM0hT5ZySipmPcj1FkTg7bLokdj3JdyzGuLZmPeFHgOkQ-0A"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-serif text-lg text-coffee leading-tight">Chemex (2 Personas)</h3>
+<span class="font-bold text-coffee ml-2">$11.00</span>
+</div>
+<p class="text-coffee/60 text-xs mt-1 line-clamp-2 font-light">Extracción limpia y brillante gracias a su filtro de triple densidad. Para compartir.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-coffee/5 py-12 border-t border-coffee/5">
+<div class="max-w-md mx-auto px-4 text-center">
+<h2 class="font-serif text-xl text-coffee mb-2">La Capilla del Café</h2>
+<p class="text-coffee/40 text-[11px] italic mb-8">"Donde el grano encuentra su alma"</p>
+<div class="grid grid-cols-2 gap-4 text-left mb-8">
+<div>
+<span class="block text-[10px] font-bold text-primary uppercase mb-1">Visítanos</span>
+<p class="text-coffee/60 text-xs">Calle de la Santidad 402, Barrio Histórico</p>
+</div>
+<div>
+<span class="block text-[10px] font-bold text-primary uppercase mb-1">Horarios</span>
+<p class="text-coffee/60 text-xs">Lun - Vie: 08:00 - 20:00</p>
+</div>
+</div>
+<div class="flex justify-center gap-6 mb-8 opacity-40">
+<span class="material-icons text-coffee">camera_alt</span>
+<span class="material-icons text-coffee">facebook</span>
+</div>
+<p class="text-[9px] tracking-widest text-coffee/30 uppercase font-bold">© 2024 La Capilla del Café</p>
+</div>
+</footer>
+
+</body></html>

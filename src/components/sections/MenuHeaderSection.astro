@@ -1,0 +1,95 @@
+---
+import { menuTabs } from '../../data/menu-tabs.data';
+---
+
+<section class="bg-background-light" aria-label="Encabezado de carta">
+  <nav
+    class="fixed w-full top-16 z-40 border-t border-secondary/10 bg-background/75 backdrop-blur-md py-3 md:top-14.5"
+    aria-label="Filtro por categorías"
+    data-menu-filter
+  >
+    <div class="mx-auto max-w-6xl flex items-center">
+      <label for="menu-category-select" class="sr-only">Seleccionar categoría</label>
+      <select
+        id="menu-category-select"
+        class="w-full rounded-xl border text-center text-neutral-900/80 border-secondary/10 bg-white px-4 py-2 text-sm font-semibold focus:border-primary focus:outline-none md:hidden appearance-none no-chevron"
+      >
+        {menuTabs.map((tab) => (
+        <option value={tab.value} selected={tab.active}>{tab.label}</option>
+        ))}
+      </select>
+
+      <ul class="hidden gap-3 overflow-x-auto md:flex" role="tablist" aria-label="Categorías de carta">
+        {menuTabs.map((tab) => (
+          <li>
+            <button
+              type="button"
+              role="tab"
+              data-filter-value={tab.value}
+              aria-selected={tab.active ? 'true' : 'false'}
+              class={`inline-flex whitespace-nowrap rounded-xl px-4 py-2 text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
+                tab.active
+                  ? 'bg-secondary text-white'
+                  : 'border border-secondary/10 bg-white text-secondary/60 hover:text-secondary'
+              }`}
+            >
+              {tab.label}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+</section>
+
+<script>
+  const filterRoot = document.querySelector('[data-menu-filter]');
+  const contentRoot = document.querySelector('[data-menu-content]');
+
+  if (filterRoot && contentRoot) {
+    const select = filterRoot.querySelector('#menu-category-select');
+    const tabButtons = Array.from(filterRoot.querySelectorAll('[data-filter-value]'));
+    const categorySections = Array.from(contentRoot.querySelectorAll('[data-category-section]'));
+
+    const applyFilter = (value: any) => {
+      categorySections.forEach((section) => {
+        const category = section.getAttribute('data-category-section');
+        const isVisible = value === 'all' || value === category;
+        section.classList.toggle('hidden', !isVisible);
+      });
+
+      tabButtons.forEach((button) => {
+        const selected = button.getAttribute('data-filter-value') === value;
+        button.setAttribute('aria-selected', selected ? 'true' : 'false');
+        button.classList.toggle('bg-secondary', selected);
+        button.classList.toggle('text-white', selected);
+        button.classList.toggle('border', !selected);
+        button.classList.toggle('border-secondary/10', !selected);
+        button.classList.toggle('bg-white', !selected);
+        button.classList.toggle('text-secondary/60', !selected);
+      });
+
+      if (select && select.value !== value) {
+        select.value = value;
+      }
+    };
+
+    tabButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const value = button.getAttribute('data-filter-value') || 'all';
+        applyFilter(value);
+      });
+    });
+
+    if (select) {
+      select.addEventListener('change', (event) => {
+        const target = event.target;
+        if (target instanceof HTMLSelectElement) {
+          applyFilter(target.value);
+        }
+      });
+    }
+
+    applyFilter('all');
+  }
+</script>

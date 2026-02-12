@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import '@fontsource/poppins/100.css';
+@import '@fontsource/poppins/200.css';
+@import '@fontsource/poppins/300.css';
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+@import '@fontsource/poppins/800.css';
+@import '@fontsource/poppins/900.css';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/playfair-display';
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Poppins", sans-serif;
+  --color-primary: #189b30;
+  --color-secondary: #050004;
+  --color-background: #F9F7F2;
+  --color-background-light: #f8f7f6;
+  --color-background-dark: #221910;
+  --color-coffee-dark: #1a130c;
+  --color-coffee-cream: #f4ede4;
+}
+
+@layer base {
+  body {
+    @apply min-h-screen font-sans;
+  }
+
+  a,
+  button {
+    @apply focus-visible:outline-none;
+  }
+}
+
+.no-chevron::-ms-expand { display: none; }

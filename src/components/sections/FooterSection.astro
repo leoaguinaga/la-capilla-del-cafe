@@ -1,0 +1,87 @@
+---
+import Button from '../ui/Button.astro';
+import { footerNav, legalLinks } from '../../data/footer.data';
+---
+
+<footer id="contacto" class="bg-coffee-dark px-4 pb-8 pt-16 text-white sm:px-6 lg:pb-12 lg:pt-24">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-14 grid items-center gap-10 md:mb-20 md:grid-cols-2 md:gap-12 lg:gap-16">
+      <div class="space-y-6 md:space-y-8">
+        <h2 class="font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">
+          Ven y vive la experiencia del café de especialidad
+        </h2>
+        <p class="text-base text-white/70 sm:text-lg">
+          Estamos listos para prepararte la mejor taza de tu día. Visítanos en cualquiera de nuestras tres sedes en Chiclayo.
+        </p>
+        <Button
+          href="https://wa.me/51XXXXXXXXX?text=Hola%2C%20quiero%20encontrar%20la%20sede%20m%C3%A1s%20cercana"
+          size="lg"
+          class="w-full rounded-xl sm:w-auto"
+        >
+          Contáctanos por WhatsApp
+        </Button>
+      </div>
+
+      <div class="h-64 overflow-hidden rounded-2xl border border-white/10 grayscale transition-all duration-700 hover:grayscale-0 sm:h-80 md:h-96">
+        <img
+          src="https://images.pexels.com/photos/4790063/pexels-photo-4790063.jpeg"
+          alt="Mapa referencial de Chiclayo con sedes"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <hr class="mb-10 border-white/10 md:mb-12" />
+
+    <div class="mb-10 grid gap-10 text-sm sm:grid-cols-2 lg:mb-12 lg:grid-cols-4 lg:gap-12 text-center md:text-left">
+      <div class="space-y-5">
+        <div class="flex items-center gap-2 justify-center md:justify-start">
+          <img src="/logo-alt.png" class="h-10 invert" alt="La Capilla del Café" />
+        </div>
+        <p class="text-white/60">
+          Pasión por el café desde el origen. Productores independientes comprometidos con la calidad suprema.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="mb-4 text-xs font-bold uppercase tracking-[0.2em]">Navegación</h3>
+        <ul class="space-y-3 text-white/75">
+          {footerNav.map((item) => (
+            <li>
+              <a href={item.href} class="transition-colors hover:text-primary">{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-4 text-xs font-bold uppercase tracking-[0.2em]">Contacto</h3>
+        <ul class="space-y-3 text-white/75">
+          <li>contacto@lacapilla.pe</li>
+          <li>+51 987 654 321</li>
+          <li>Instagram</li>
+          <li>Facebook</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-4 text-xs font-bold uppercase tracking-[0.2em]">Horario de atención</h3>
+        <ul class="space-y-3 text-white/75">
+          <li>Lun - Vie: 7:00am - 10:00pm</li>
+          <li>Sáb: 7:00am - 10:00pm</li>
+          <li>Dom: 7:00am - 10:00pm</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div class="flex flex-col items-start justify-between gap-4 border-t border-white/5 pt-6 text-xs text-white/50 sm:items-center md:flex-row">
+      <p>© 2024 La Capilla del Café. Todos los derechos reservados.</p>
+      <div class="flex flex-wrap gap-4 sm:gap-6">
+        {legalLinks.map((item) => (
+          <a href={item.href} class="transition-colors hover:text-white">{item.label}</a>
+        ))}
+      </div>
+    </div> -->
+  </div>
+</footer>
