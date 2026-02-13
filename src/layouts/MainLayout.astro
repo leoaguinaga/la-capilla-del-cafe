@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import FooterSection from "../components/sections/FooterSection.astro";
 import Header from "../components/sections/Header";
+import Analytics from "@vercel/analytics/astro";
 
 interface NavItem {
   label: string;
@@ -33,14 +34,15 @@ const {
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <Analytics />
   </head>
-  <body class="bg-background-light font-sans text-secondary antialiased relative">
+  <body
+    class="bg-background-light font-sans text-secondary antialiased relative"
+  >
     <Header />
-
     <main>
       <slot />
     </main>
-
     {showFooter && <FooterSection />}
   </body>
 </html>

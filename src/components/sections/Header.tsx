@@ -19,7 +19,7 @@ export default function Header() {
           {/* <a href="/#delivery" className="max-md:hidden hover:underline underline-offset-4">Delivery</a> */}
           <a
             href="/carta"
-            className="bg-primary text-white rounded-xl px-4 py-1.5 font-medium"
+            className="bg-primary text-white rounded-xl px-4 py-1.5 font-medium max-sm:hidden"
           >
             Carta
           </a>
